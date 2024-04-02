@@ -1,13 +1,13 @@
 version: '3.8'
 services:
   backend:
-    image: backend-image
+    build: ./backend
     ports:
       - "8080:8080"
     restart: unless-stopped
 
   frontend:
-    image: frontend-image
+    build: ./frontend
     ports:
       - "3000:80"
     restart: unless-stopped
