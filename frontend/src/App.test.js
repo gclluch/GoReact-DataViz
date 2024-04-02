@@ -1,8 +1,14 @@
+// App.test.js
+import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+jest.mock('./TimeSeriesChart', () => () => <div>TimeSeriesChart Mock</div>);
+
+// Verifies that the App component renders correctly and includes two instances of the 
+// TimeSeriesChart component, ensuring the main structure of the application is as expected.
+test('renders App with TimeSeriesChart components', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const chartComponents = screen.getAllByText('TimeSeriesChart Mock');
+  expect(chartComponents).toHaveLength(2); // Expect two instances of the TimeSeriesChart component
 });

@@ -15,8 +15,6 @@ func TestGenerateSineWave(t *testing.T) {
 	if len(data) != 360 {
 		t.Errorf("Expected 360 data points, got %d", len(data))
 	}
-
-	// Optionally, test specific values in the data.
 }
 
 // TestGenerateDampedOscillations verifies the damped oscillations data generation.
@@ -25,8 +23,6 @@ func TestGenerateDampedOscillations(t *testing.T) {
 	if len(data) != 360 {
 		t.Errorf("Expected 360 data points, got %d", len(data))
 	}
-
-	// Optionally, test specific values in the data.
 }
 
 // TestSeries1Endpoint tests the /api/series1 endpoint.

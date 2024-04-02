@@ -15,7 +15,7 @@ const useFetchData = (url) => {
         };
 
         fetchData();
-    }, [url]); // Ensure URL is in the dependency array
+    }, [url]);
 
     return data;
 };
